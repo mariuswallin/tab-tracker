@@ -8,7 +8,7 @@
     <input type="password" name="password" placeholder="password" id="password" v-model="password">
     <br>
     <div class="error" v-html="error"></div>
-    <button @click="register">Register</button>
+    <button @click="login">Login</button>
   </div>
 </template>
 
@@ -16,7 +16,7 @@
 import AuthService from "@/services/AuthService";
 
 export default {
-  name: "Register",
+  name: "Login",
   data() {
     return {
       email: "",
@@ -28,9 +28,9 @@ export default {
     msg: String
   },
   methods: {
-    async register() {
+    async login() {
       try {
-        await AuthService.register({
+        await AuthService.login({
           email: this.email,
           password: this.password
         });

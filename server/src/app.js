@@ -8,15 +8,11 @@ const {
 const config = require("./config/config");
 const app = express();
 
-const routes = require("./routes");
-
-routes(app);
-
-
 app.use(morgan("combined"));
 app.use(bodyParser.json());
 app.use(cors());
 
+require("./routes")(app);
 
 sequelize.sync()
 	.then(() => {
