@@ -1,0 +1,38 @@
+{
+	"env": {
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			1,
+			"double", {
+				"allowTemplateLiterals": true
+			}
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-console": [0, {
+			"allow": ["warn", "error"]
+		}],
+		"no-unused-vars": [1, {
+			"allow": ["warn", "error"]
+		}]
+	}
+}
